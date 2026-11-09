@@ -1,0 +1,95 @@
+name: NFSConnect
+options:
+  bundleIdPrefix: com.egemenince
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "Developer ID Application: Egemen Ince (99U7KZC748)"
+    DEVELOPMENT_TEAM: 99U7KZC748
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: NFS Connect
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+    INFOPLIST_KEY_LSUIElement: YES
+    INFOPLIST_KEY_NSHighResolutionCapable: YES
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    PRODUCT_BUNDLE_IDENTIFIER: com.egemenince.NFSConnect
+    PRODUCT_NAME: NFS Connect
+targets:
+  NFSConnect:
+    type: application
+    platform: macOS
+    sources:
+      - Sources
+      - Shared
+      - Assets.xcassets
+    dependencies:
+      - target: NFSConnectPrivilegedHelper
+        embed: false
+      - target: NFSConnectSSHAskpass
+        embed: false
+    postBuildScripts:
+      - name: Embed and sign privileged helper
+        inputFiles:
+          - "$(BUILT_PRODUCTS_DIR)/NFSConnectPrivilegedHelper"
+          - "$(SRCROOT)/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist"
+          - "$(BUILT_PRODUCTS_DIR)/NFSConnectSSHAskpass"
+        outputFiles:
+          - "$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/MacOS/NFSConnectPrivilegedHelper"
+          - "$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist"
+          - "$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Helpers/NFSConnectSSHAskpass"
+        script: |
+          set -eu
+          APP_PATH="${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}"
+          HELPER_SOURCE="${BUILT_PRODUCTS_DIR}/NFSConnectPrivilegedHelper"
+          ASKPASS_SOURCE="${BUILT_PRODUCTS_DIR}/NFSConnectSSHAskpass"
+          HELPER_DIRECTORY="${APP_PATH}/Contents/MacOS"
+          ASKPASS_DIRECTORY="${APP_PATH}/Contents/Helpers"
+          DAEMON_DIRECTORY="${APP_PATH}/Contents/Library/LaunchDaemons"
+          mkdir -p "${HELPER_DIRECTORY}" "${ASKPASS_DIRECTORY}" "${DAEMON_DIRECTORY}"
+          install -m 755 "${HELPER_SOURCE}" "${HELPER_DIRECTORY}/NFSConnectPrivilegedHelper"
+          install -m 755 "${ASKPASS_SOURCE}" "${ASKPASS_DIRECTORY}/NFSConnectSSHAskpass"
+          install -m 644 "${SRCROOT}/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist" "${DAEMON_DIRECTORY}/"
+          if [ -n "${EXPANDED_CODE_SIGN_IDENTITY:-}" ]; then
+            /usr/bin/codesign --force --options runtime --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --timestamp "${HELPER_DIRECTORY}/NFSConnectPrivilegedHelper"
+            /usr/bin/codesign --force --options runtime --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --timestamp "${ASKPASS_DIRECTORY}/NFSConnectSSHAskpass"
+          fi
+  NFSConnectPrivilegedHelper:
+    type: tool
+    platform: macOS
+    sources:
+      - Helper
+      - Shared
+    settings:
+      base:
+        SWIFT_VERSION: "5.0"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "Developer ID Application: Egemen Ince (99U7KZC748)"
+        DEVELOPMENT_TEAM: 99U7KZC748
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.egemenince.NFSConnect.PrivilegedHelper
+        PRODUCT_NAME: NFSConnectPrivilegedHelper
+  NFSConnectSSHAskpass:
+    type: tool
+    platform: macOS
+    sources:
+      - SSHAskpass
+    settings:
+      base:
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "Developer ID Application: Egemen Ince (99U7KZC748)"
+        DEVELOPMENT_TEAM: 99U7KZC748
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.egemenince.NFSConnect.SSHAskpass
+        PRODUCT_NAME: NFSConnectSSHAskpass

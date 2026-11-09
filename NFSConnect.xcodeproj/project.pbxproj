@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		145AC7AED62AE44BB4811629 /* NFSPrivilegedServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD1E0A887AF1622806EA2C /* NFSPrivilegedServiceProtocol.swift */; };
+		1825FAA27F54811EADCB1DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C9AA3C7AE13CCB308C0B12E /* Assets.xcassets */; };
+		26E6AEA6518B6BCA5540D02D /* SSHMounting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE93B71CF23259E3BE6ABDF /* SSHMounting.swift */; };
+		2F71383A73FF55607746A664 /* NFSPrivilegedServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD1E0A887AF1622806EA2C /* NFSPrivilegedServiceProtocol.swift */; };
+		6DF72E8426438EE3A1951803 /* NFSConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE23726BBA3028FDA065BCA5 /* NFSConnectApp.swift */; };
+		893F3014EEFC35FD9D4F8634 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB782AEFF36F33328E96BB /* main.swift */; };
+		EAD7CBB8736E02AAFA16729E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 483E0701ADCC5160BFA64F8F /* main.c */; };
+		ECBAE335742121AA680858A3 /* PrivilegedServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D24CEA974BCBAE8942E0D3 /* PrivilegedServiceClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F3C84259E5B3EC14C3D7E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB9B5ECAC978C37BF88E5D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19611F53308BBCAE1154B76E;
+			remoteInfo = NFSConnectSSHAskpass;
+		};
+		B0202D9E34A05B7A6949D15D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB9B5ECAC978C37BF88E5D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6A6930B827704D39E684A1E;
+			remoteInfo = NFSConnectPrivilegedHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29D24CEA974BCBAE8942E0D3 /* PrivilegedServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegedServiceClient.swift; sourceTree = "<group>"; };
+		30920DA1FFCC868EB22364EB /* NFSConnectSSHAskpass */ = {isa = PBXFileReference; includeInIndex = 0; path = NFSConnectSSHAskpass; sourceTree = BUILT_PRODUCTS_DIR; };
+		483E0701ADCC5160BFA64F8F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6C9AA3C7AE13CCB308C0B12E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DBD1E0A887AF1622806EA2C /* NFSPrivilegedServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFSPrivilegedServiceProtocol.swift; sourceTree = "<group>"; };
+		9AE93B71CF23259E3BE6ABDF /* SSHMounting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHMounting.swift; sourceTree = "<group>"; };
+		AD4BEE671ECEB37BF6E048DB /* NFSConnectPrivilegedHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = NFSConnectPrivilegedHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA48F47A83D7FF996280D35 /* NFSConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFSConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CB782AEFF36F33328E96BB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DE23726BBA3028FDA065BCA5 /* NFSConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFSConnectApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2B07A7E4F1DFDB765FF6E8DE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD1E0A887AF1622806EA2C /* NFSPrivilegedServiceProtocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		888A1EEE4B12A39A76272EE9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB782AEFF36F33328E96BB /* main.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A4644F854C770D29E93A3843 = {
+			isa = PBXGroup;
+			children = (
+				6C9AA3C7AE13CCB308C0B12E /* Assets.xcassets */,
+				888A1EEE4B12A39A76272EE9 /* Helper */,
+				2B07A7E4F1DFDB765FF6E8DE /* Shared */,
+				F358874B9A776D76899CBD54 /* Sources */,
+				F18682425CB644028C0983A0 /* SSHAskpass */,
+				E55A2BB489DDFCDE9CA8093A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E55A2BB489DDFCDE9CA8093A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDA48F47A83D7FF996280D35 /* NFSConnect.app */,
+				AD4BEE671ECEB37BF6E048DB /* NFSConnectPrivilegedHelper */,
+				30920DA1FFCC868EB22364EB /* NFSConnectSSHAskpass */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F18682425CB644028C0983A0 /* SSHAskpass */ = {
+			isa = PBXGroup;
+			children = (
+				483E0701ADCC5160BFA64F8F /* main.c */,
+			);
+			path = SSHAskpass;
+			sourceTree = "<group>";
+		};
+		F358874B9A776D76899CBD54 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DE23726BBA3028FDA065BCA5 /* NFSConnectApp.swift */,
+				29D24CEA974BCBAE8942E0D3 /* PrivilegedServiceClient.swift */,
+				9AE93B71CF23259E3BE6ABDF /* SSHMounting.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19611F53308BBCAE1154B76E /* NFSConnectSSHAskpass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1791A9684A572AD8E0006F06 /* Build configuration list for PBXNativeTarget "NFSConnectSSHAskpass" */;
+			buildPhases = (
+				CE82AB5D04179824BF312B49 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NFSConnectSSHAskpass;
+			packageProductDependencies = (
+			);
+			productName = NFSConnectSSHAskpass;
+			productReference = 30920DA1FFCC868EB22364EB /* NFSConnectSSHAskpass */;
+			productType = "com.apple.product-type.tool";
+		};
+		821F4C51EE50B7E21FCE5E51 /* NFSConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629354DFC512A7CBD1C4024A /* Build configuration list for PBXNativeTarget "NFSConnect" */;
+			buildPhases = (
+				33C0190F7325B51DF83DF152 /* Sources */,
+				9D870275887DC22E1E7B5AD6 /* Resources */,
+				CC027D51CFE0CDE72D0F0610 /* Embed and sign privileged helper */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85352F37B097C860EACAFC7D /* PBXTargetDependency */,
+				0870B9D11FFCAC6A0100A28D /* PBXTargetDependency */,
+			);
+			name = NFSConnect;
+			packageProductDependencies = (
+			);
+			productName = NFSConnect;
+			productReference = BDA48F47A83D7FF996280D35 /* NFSConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6A6930B827704D39E684A1E /* NFSConnectPrivilegedHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFE7D24E2F56802B6F0804A2 /* Build configuration list for PBXNativeTarget "NFSConnectPrivilegedHelper" */;
+			buildPhases = (
+				61CDFC184022435C8098FE56 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NFSConnectPrivilegedHelper;
+			packageProductDependencies = (
+			);
+			productName = NFSConnectPrivilegedHelper;
+			productReference = AD4BEE671ECEB37BF6E048DB /* NFSConnectPrivilegedHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EB9B5ECAC978C37BF88E5D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					19611F53308BBCAE1154B76E = {
+						DevelopmentTeam = 99U7KZC748;
+						ProvisioningStyle = Manual;
+					};
+					821F4C51EE50B7E21FCE5E51 = {
+						DevelopmentTeam = 99U7KZC748;
+						ProvisioningStyle = Manual;
+					};
+					C6A6930B827704D39E684A1E = {
+						DevelopmentTeam = 99U7KZC748;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C415BCC667663D058699A257 /* Build configuration list for PBXProject "NFSConnect" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A4644F854C770D29E93A3843;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E55A2BB489DDFCDE9CA8093A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				821F4C51EE50B7E21FCE5E51 /* NFSConnect */,
+				C6A6930B827704D39E684A1E /* NFSConnectPrivilegedHelper */,
+				19611F53308BBCAE1154B76E /* NFSConnectSSHAskpass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D870275887DC22E1E7B5AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1825FAA27F54811EADCB1DC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC027D51CFE0CDE72D0F0610 /* Embed and sign privileged helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/NFSConnectPrivilegedHelper",
+				"$(SRCROOT)/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist",
+				"$(BUILT_PRODUCTS_DIR)/NFSConnectSSHAskpass",
+			);
+			name = "Embed and sign privileged helper";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/MacOS/NFSConnectPrivilegedHelper",
+				"$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist",
+				"$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Helpers/NFSConnectSSHAskpass",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\nAPP_PATH=\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\"\nHELPER_SOURCE=\"${BUILT_PRODUCTS_DIR}/NFSConnectPrivilegedHelper\"\nASKPASS_SOURCE=\"${BUILT_PRODUCTS_DIR}/NFSConnectSSHAskpass\"\nHELPER_DIRECTORY=\"${APP_PATH}/Contents/MacOS\"\nASKPASS_DIRECTORY=\"${APP_PATH}/Contents/Helpers\"\nDAEMON_DIRECTORY=\"${APP_PATH}/Contents/Library/LaunchDaemons\"\nmkdir -p \"${HELPER_DIRECTORY}\" \"${ASKPASS_DIRECTORY}\" \"${DAEMON_DIRECTORY}\"\ninstall -m 755 \"${HELPER_SOURCE}\" \"${HELPER_DIRECTORY}/NFSConnectPrivilegedHelper\"\ninstall -m 755 \"${ASKPASS_SOURCE}\" \"${ASKPASS_DIRECTORY}/NFSConnectSSHAskpass\"\ninstall -m 644 \"${SRCROOT}/LaunchDaemons/com.egemenince.NFSConnect.PrivilegedHelper.plist\" \"${DAEMON_DIRECTORY}/\"\nif [ -n \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" ]; then\n  /usr/bin/codesign --force --options runtime --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --timestamp \"${HELPER_DIRECTORY}/NFSConnectPrivilegedHelper\"\n  /usr/bin/codesign --force --options runtime --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --timestamp \"${ASKPASS_DIRECTORY}/NFSConnectSSHAskpass\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33C0190F7325B51DF83DF152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF72E8426438EE3A1951803 /* NFSConnectApp.swift in Sources */,
+				2F71383A73FF55607746A664 /* NFSPrivilegedServiceProtocol.swift in Sources */,
+				ECBAE335742121AA680858A3 /* PrivilegedServiceClient.swift in Sources */,
+				26E6AEA6518B6BCA5540D02D /* SSHMounting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61CDFC184022435C8098FE56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145AC7AED62AE44BB4811629 /* NFSPrivilegedServiceProtocol.swift in Sources */,
+				893F3014EEFC35FD9D4F8634 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE82AB5D04179824BF312B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD7CBB8736E02AAFA16729E /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0870B9D11FFCAC6A0100A28D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19611F53308BBCAE1154B76E /* NFSConnectSSHAskpass */;
+			targetProxy = 6F3C84259E5B3EC14C3D7E9C /* PBXContainerItemProxy */;
+		};
+		85352F37B097C860EACAFC7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6A6930B827704D39E684A1E /* NFSConnectPrivilegedHelper */;
+			targetProxy = B0202D9E34A05B7A6949D15D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13112584294A05E9221E71AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect.SSHAskpass;
+				PRODUCT_NAME = NFSConnectSSHAskpass;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43E35E118EAA68C1361829DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		68C74014A5D62497DCA3B5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6F3621E3B99D14F2D1515AE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect.PrivilegedHelper;
+				PRODUCT_NAME = NFSConnectPrivilegedHelper;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		77730CAC75C01E9E77B1ADE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect.SSHAskpass;
+				PRODUCT_NAME = NFSConnectSSHAskpass;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3D3FA00FAE983A05EAF6196 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect.PrivilegedHelper;
+				PRODUCT_NAME = NFSConnectPrivilegedHelper;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB6A9F365DE970EF3E1AFF26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NFS Connect";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect;
+				PRODUCT_NAME = "NFS Connect";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E86F6367FB48CCFA646821EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Egemen Ince (99U7KZC748)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 99U7KZC748;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NFS Connect";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemenince.NFSConnect;
+				PRODUCT_NAME = "NFS Connect";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1791A9684A572AD8E0006F06 /* Build configuration list for PBXNativeTarget "NFSConnectSSHAskpass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77730CAC75C01E9E77B1ADE5 /* Debug */,
+				13112584294A05E9221E71AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		629354DFC512A7CBD1C4024A /* Build configuration list for PBXNativeTarget "NFSConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C74014A5D62497DCA3B5A1 /* Debug */,
+				43E35E118EAA68C1361829DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BFE7D24E2F56802B6F0804A2 /* Build configuration list for PBXNativeTarget "NFSConnectPrivilegedHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D3FA00FAE983A05EAF6196 /* Debug */,
+				6F3621E3B99D14F2D1515AE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C415BCC667663D058699A257 /* Build configuration list for PBXProject "NFSConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E86F6367FB48CCFA646821EC /* Debug */,
+				CB6A9F365DE970EF3E1AFF26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EB9B5ECAC978C37BF88E5D8 /* Project object */;
+}
